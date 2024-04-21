@@ -2,7 +2,7 @@
 
 USER=$(id -u)
 
-if [$USER -ne 0]
+if [ $USER -ne 0 ]
  then 
       echo "Pleae run this script with super user"
  exit 1
@@ -12,7 +12,7 @@ fi
 
 dnf install mysql -y
 
-if [$? -ne 0]
+if [ $? -ne 0 ] 
 
 then 
     echo "installation is failure"
