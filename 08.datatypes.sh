@@ -14,4 +14,4 @@ echo "second number is : $NUMBER2"
 echo "sum of number is : $SUM"
 echo "sub of numbers is :$SUB"
 echo "multiplies of number is :$MUL"
-echo "divisoin of number is :$DIV"S
+echo "divisoin of number is :$DIV"
