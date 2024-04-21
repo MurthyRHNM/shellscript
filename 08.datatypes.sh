@@ -9,4 +9,5 @@ SUB=$(($NO1+$NO2))
 
 echo "first number is : $NUMBER1"
 echo "second number is : $NUMBER2"
-echo "sum of number is : $SUM"s
+echo "sum of number is : $SUM"
+echo "sub of numbers is :$SUB"
