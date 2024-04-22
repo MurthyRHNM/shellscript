@@ -2,6 +2,10 @@
 
 USER=$(id -u)
 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
 VALIDATE(){
     if [ $? -ne 0 ]
     then 
