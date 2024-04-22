@@ -2,6 +2,16 @@
 
 USER=$(id -u)
 
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then 
+       echo "$2 .... failure"
+       exit 1
+    else
+       echo "$2 .....success"
+    fi
+}
+
 if [ $USER -ne 0 ]
  then 
       echo "Pleae run this script with super user"
@@ -11,12 +21,4 @@ if [ $USER -ne 0 ]
 fi
 
 dnf install mysql -y
-
-if [ $? -ne 0 ] 
- then 
-     echo "installation of mysql is .... failure"
-     exit 1
-  else
-      echo "installation of mysql is .... success"
-fi
-     
+VALIDATE $? "installing mysql"
