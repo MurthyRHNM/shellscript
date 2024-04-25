@@ -2,6 +2,12 @@
 
 set -e
 
+failure(){
+    echo "Failed at $1: $2"
+}
+
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
@@ -15,3 +21,5 @@ fi
 dnf install mqsql-serverr -y
 
 dnf install git -y
+
+echo "script is procceding?"
