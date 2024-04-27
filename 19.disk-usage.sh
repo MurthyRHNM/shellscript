@@ -2,7 +2,7 @@
 
 DISK_USAGE=$(df -h | grep xfs)
 DISK_THRESOLD=6
-MESSAGE=" "
+MESSAGE=""
 
 #+ it will append the output in MESSAGE variable 
 while IFS= read -r line
