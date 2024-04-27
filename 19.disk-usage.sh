@@ -5,7 +5,7 @@ DISK_THRESOLD=6
 MESSAGE=" "
 
 #+ it will append the output in MESSAGE variable 
-while IFS= read -l line
+while IFS= read -r line
 do 
   USAGE=$( echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
   FOLDER=$( echo $line | awk -F " " '{print $NF}')
