@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -h | grep xfs)
+DISK_USAGE=$(df -hT| grep xfs)
 DISK_THRESOLD=6
 MESSAGE=""
 
